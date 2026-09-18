@@ -482,6 +482,11 @@ details.more .inner { margin-top: 20px; }
 .form textarea { min-height: 150px; resize: vertical; }
 .form .note { font-size: 14px; color: var(--ink-50); margin: 0; }
 .form .hp { position: absolute; left: -9999px; }
+.form .btn:disabled { opacity: .6; cursor: progress; transform: none; box-shadow: none; }
+.form-status { margin: 0; font-weight: 700; font-size: 15px; }
+.form-status:empty { display: none; }
+.form-status.is-ok { padding: 14px 16px; border-radius: 6px; border: 2px solid var(--line-strong); background: var(--lime-fill); color: #000; }
+.form-status.is-err { padding: 14px 16px; border-radius: 6px; border: 2px solid var(--red); color: var(--red); }
 
 /* Footer */
 .site-foot { border-top: 2px solid var(--ink); padding-block: 48px; }

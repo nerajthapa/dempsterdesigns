@@ -204,16 +204,22 @@
       </div>
 
       <!--
-        FORM: markup only. To make it live with Formspree:
-          1. Create a form at https://formspree.io and copy its endpoint, e.g. https://formspree.io/f/abcdwxyz
-          2. Change the <form> tag below to:
-               <form class="form" action="https://formspree.io/f/abcdwxyz" method="POST">
-          3. Optional: add <input type="hidden" name="_subject" value="New enquiry from dempsterdesigns.com">
-             and <input type="hidden" name="_next" value="https://YOUR-DOMAIN/thanks.html"> for a custom redirect.
-          4. The honeypot field named "_gotcha" is already present; Formspree drops submissions that fill it.
+        FORM: handled by Netlify Forms. Netlify finds this form at deploy time through the data-netlify
+        attribute (form detection must be enabled in the dashboard) and stores every submission under
+        Netlify → Forms → "contact". Same origin as the site — no third-party form service involved.
+
+        RECIPIENT: set in the Netlify dashboard, not here: Forms → Form submission notifications →
+        Add notification → Email notification → enter the address, form "contact". Add one notification
+        per recipient; change or remove them there at any time, no redeploy needed.
+
+        With JS the form posts in the background (assets/js/main.js, 4g) and shows a message in .form-status.
+        Without JS it posts normally and Netlify shows its own thank-you page.
+        The honeypot field "bot-field" drops bot submissions.
         Field names (first_name, last_name, company, email, phone, message) match the live site's Gravity Form.
+        If a field is added or renamed, redeploy so Netlify picks it up.
       -->
-      <form class="form reveal" style="--i:1" action="#" method="post" novalidate>
+      <form class="form reveal" style="--i:1" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
         <p class="note">" * " indicates required fields</p>
         <div class="row">
           <label><span>First Name <span class="req" aria-hidden="true">*</span></span><input type="text" name="first_name" autocomplete="given-name" required></label>
@@ -225,9 +231,10 @@
           <label><span>Phone <span class="req" aria-hidden="true">*</span></span><input type="tel" name="phone" autocomplete="tel" required></label>
         </div>
         <label><span>Message</span><textarea name="message"></textarea></label>
-        <label class="hp" aria-hidden="true">Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        <label class="hp" aria-hidden="true">Leave this empty<input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
         <!-- TODO: the live site has no submit-button label in its markup (Gravity Forms default). "Start the Conversation" is reused from the homepage CTA. -->
         <div><button class="btn" type="submit">Start the Conversation</button></div>
+        <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>

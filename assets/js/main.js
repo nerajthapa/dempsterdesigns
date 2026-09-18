@@ -2,7 +2,7 @@
    1. Hero fitter: sizes each word-stack so it fits the viewport width AND height (no cut-off hero)
    2. Intro + scroll reveals (IntersectionObserver), staggered
    3. Header theme follows the section under it (light / dark)
-   4. Mobile nav, marquee pause, video play/pause, lightbox, fixed CTA pill, parallax
+   4. Mobile nav, marquee pause, video play/pause, lightbox, fixed CTA pill, parallax, contact form
    Everything motion-related is skipped under prefers-reduced-motion.
 */
 (function () {
@@ -178,6 +178,33 @@
       var f = parseFloat(el.getAttribute('data-parallax')) || 0.15;
       var centre = r.top + r.height / 2 - vh / 2;
       el.style.setProperty('--py', Math.round(-centre * f) + 'px');
+    });
+  }
+
+  /* 4g. Contact form -------------------------------------------------------- */
+  // Netlify Forms: a URL-encoded POST to the site itself, including the hidden form-name field.
+  // Who gets emailed is set in the Netlify dashboard (Forms → Form submission notifications).
+  var form = document.querySelector('form[data-netlify]');
+  var fStatus = form && form.querySelector('.form-status');
+  var fBtn = form && form.querySelector('button[type="submit"]');
+  if (form && fStatus && fBtn && window.fetch && window.FormData && window.URLSearchParams) {
+    var fLabel = fBtn.textContent;
+    var say = function (msg, state) { fStatus.textContent = msg; fStatus.className = 'form-status' + (state ? ' is-' + state : ''); };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      fBtn.disabled = true; fBtn.textContent = 'Sending…'; say('', '');
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          form.reset();
+          say('Thanks! Your message has been sent. We’ll be in touch shortly.', 'ok');
+        })
+        .catch(function () { say('Sorry, your message could not be sent. Please try again, or call us at (248) 398-9999.', 'err'); })
+        .then(function () { fBtn.disabled = false; fBtn.textContent = fLabel; });
     });
   }
 
