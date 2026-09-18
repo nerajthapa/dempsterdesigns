@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Dempster Designs — We Create Award Winning Signs</title>
+
+  <meta name="description" content="We transform visions into compelling visual solutions that capture attention and inspire action. Signs, branding and creative services from Bloomfield Hills, Michigan, for over 60 years.">
+
+  <meta name="theme-color" content="#0b0b0c">
+
+  <link rel="icon" href="assets/img/figma_1_260.png" type="image/png">
+
+  <!-- Fonts: Big Shoulders Display + Instrument Sans from Google Fonts, self-hosted as variable woff2 (see assets/css/style.css).
+
+       Zero external requests. Google Fonts equivalent if preferred:
+
+       https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Sans:wght@400;600;700&display=swap -->
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/BigShouldersDisplay-var.woff2" crossorigin>
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InstrumentSans-var.woff2" crossorigin>
+
+  <link rel="preload" as="image" imagesrcset="assets/img/cutouts/bloomfield-hills-sign-400.webp 400w, assets/img/cutouts/bloomfield-hills-sign.webp 800w" imagesizes="(min-width: 900px) 20vw, 120px" media="(min-width: 900px)">
+  <link rel="preload" as="image" imagesrcset="assets/img/cutouts/kawasaki-sign-400.webp 400w, assets/img/cutouts/kawasaki-sign.webp 600w" imagesizes="(min-width: 900px) 20vw, 120px">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+
+<!-- ===== Inline SVG sticker sprite (referenced with <use>) — no extra requests ===== -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+
+  <defs>
+
+    <symbol id="s-star" viewBox="0 0 100 100"><path d="M50 6 L61 37 L94 38 L67 58 L77 91 L50 71 L23 91 L33 58 L6 38 L39 37 Z" fill="var(--lime-fill, #b4ff2a)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-bolt" viewBox="0 0 60 100"><path d="M36 3 L8 56 L28 54 L20 97 L54 40 L33 43 Z" fill="var(--blue, #2f7bff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow" viewBox="0 0 160 100"><path d="M6 78 C 30 20, 70 14, 96 44 C 112 62, 128 66, 146 48" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M124 34 L150 44 L138 68" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow2" viewBox="0 0 160 60"><path d="M6 32 C 40 26, 80 36, 148 28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M124 8 L152 28 L122 50" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-hand" viewBox="0 0 120 100"><path d="M8 46 C 4 40, 10 32, 18 34 L 70 36 L 70 12 C 70 4, 82 4, 82 12 L 82 36 L 100 40 C 110 42, 112 50, 108 56 L 108 62 C 110 70, 106 76, 100 78 L 100 84 C 100 92, 92 96, 84 94 L 40 90 C 26 88, 18 78, 14 66 Z" fill="var(--bg, #fff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M82 40 L 82 56 M 96 58 L 96 76 M 100 62 L 84 62 M 100 78 L 84 78" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-burst" viewBox="0 0 100 100"><g stroke="var(--red, #ff3b3f)" stroke-width="5" stroke-linecap="round"><path d="M50 4 V22 M50 78 V96 M4 50 H22 M78 50 H96 M17 17 L30 30 M70 70 L83 83 M83 17 L70 30 M30 70 L17 83"/></g><circle cx="50" cy="50" r="14" fill="var(--red, #ff3b3f)" stroke="currentColor" stroke-width="4"/></symbol>
+
+    <symbol id="s-squig" viewBox="0 0 200 40"><path d="M4 22 C 24 2, 44 42, 64 22 S 104 2, 124 22 S 164 42, 196 14" fill="none" stroke="var(--blue, #2f7bff)" stroke-width="7" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-aster" viewBox="0 0 100 100"><g stroke="var(--gold, #e2bd57)" stroke-width="12" stroke-linecap="round"><path d="M50 8 V92 M14 29 L86 71 M86 29 L14 71"/></g></symbol>
+
+    <symbol id="s-curve" viewBox="0 0 120 120"><path d="M12 96 C 6 40, 60 6, 104 24" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round"/><path d="M84 8 L108 26 L88 46" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-circle" viewBox="0 0 120 120"><path d="M60 14 C 90 10, 112 30, 108 60 C 104 92, 74 110, 46 104 C 18 98, 6 70, 14 44 C 20 26, 36 16, 54 16" fill="none" stroke="var(--gold, #e2bd57)" stroke-width="6" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-dots" viewBox="0 0 200 60"><circle cx="30" cy="30" r="22" fill="rgba(255,255,255,.55)"/><path d="M100 46 L80 28 C74 22 76 12 86 12 C92 12 97 16 100 21 C103 16 108 12 114 12 C124 12 126 22 120 28 Z" fill="rgba(255,255,255,.85)"/><circle cx="170" cy="30" r="22" fill="rgba(255,255,255,.55)"/></symbol>
+    <symbol id="s-dotarrow" viewBox="0 0 120 100"><g fill="var(--gold, #e2bd57)"><circle cx="10" cy="50" r="6"/><circle cx="28" cy="50" r="6"/><circle cx="46" cy="50" r="6"/><circle cx="64" cy="50" r="6"/><circle cx="82" cy="50" r="6"/><circle cx="64" cy="32" r="6"/><circle cx="64" cy="68" r="6"/><circle cx="82" cy="20" r="6"/><circle cx="82" cy="80" r="6"/><circle cx="100" cy="50" r="6"/><circle cx="46" cy="20" r="6"/><circle cx="46" cy="80" r="6"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4 H10 V20 H6 Z M14 4 H18 V20 H14 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+  </defs>
+
+</svg>
+
+
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+
+  <div class="wrap">
+
+    <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+      <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="">
+
+      <span>Dempster Designs</span>
+
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+
+      <span class="lbl">Menu</span>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+
+      <ul>
+
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="what-we-offer.html">What We Offer</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main id="main">
+
+
+  <!-- HERO — word-stack collage on white (thesigngroup homepage pattern). Copy: dempsterdesigns.com/ H1, hero paragraph, three buttons.
+       "60 years of experience" is the text inside hero-4-v2_h2_title1-1.png on the live homepage.
+       The stack is sized by main.js so it fits the viewport width and height on every device. -->
+  <section class="hero t-dark intro" data-theme="dark" aria-labelledby="hero-h">
+    <div class="wrap">
+      <h1 class="stack" id="hero-h" data-fit="0.86">
+        <span class="line">
+          <span class="w">We</span>
+          <span class="w">Create</span>
+          <span class="stk pic rot-l desk-only" aria-hidden="true"><img src="assets/img/cutouts/bloomfield-hills-sign.webp" srcset="assets/img/cutouts/bloomfield-hills-sign-400.webp 400w, assets/img/cutouts/bloomfield-hills-sign.webp 800w" sizes="(min-width: 900px) 20vw, 120px" width="800" height="390" style="aspect-ratio:800/390" alt="" fetchpriority="high"></span>
+        </span>
+        <span class="line">
+          <span class="stk star over lift" aria-hidden="true"><svg><use href="#s-star"/></svg></span>
+          <span class="w outline">Award</span>
+          <span class="stk pic rot-r" aria-hidden="true"><img src="assets/img/cutouts/kawasaki-sign.webp" srcset="assets/img/cutouts/kawasaki-sign-400.webp 400w, assets/img/cutouts/kawasaki-sign.webp 600w" sizes="(min-width: 900px) 20vw, 120px" width="600" height="335" style="aspect-ratio:600/335" alt="" fetchpriority="high"></span>
+          <span class="stk hand desk-only" aria-hidden="true"><svg><use href="#s-hand"/></svg></span>
+        </span>
+        <span class="line">
+          <span class="w">Winning</span>
+          <span class="stk arrow desk-only" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+          <span class="stk pic rot-l2 desk-only" aria-hidden="true"><img src="assets/img/cutouts/ompt-sign.webp" srcset="assets/img/cutouts/ompt-sign-400.webp 400w, assets/img/cutouts/ompt-sign.webp 900w" sizes="(min-width: 900px) 20vw, 120px" width="900" height="608" style="aspect-ratio:900/608" alt="" loading="lazy"></span>
+        </span>
+        <span class="line">
+          <span class="stk pic rot-r2 desk-only" aria-hidden="true"><img src="assets/img/cutouts/henry-ford-van.webp" srcset="assets/img/cutouts/henry-ford-van-400.webp 400w, assets/img/cutouts/henry-ford-van.webp 900w" sizes="(min-width: 900px) 20vw, 120px" width="900" height="533" style="aspect-ratio:900/533" alt="" loading="lazy"></span>
+          <span class="w">Signs</span>
+          <span class="stk bolt over drop" aria-hidden="true"><svg><use href="#s-bolt"/></svg></span>
+          <span class="stk burst desk-only" aria-hidden="true"><svg><use href="#s-burst"/></svg></span>
+        </span>
+      </h1>
+
+      <div class="hero-foot">
+        <div>
+          <p class="lede">We transform visions into compelling visual solutions that capture attention and inspire action</p>
+          <p class="hero-badge"><svg aria-hidden="true"><use href="#s-aster"/></svg> 60 years of experience</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href="what-we-offer.html">What We Offer</a>
+          <a class="btn ghost" href="gallery.html">View Gallery</a>
+          <a class="btn ghost" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Headline repeats as a marquee: same words, same stickers -->
+    <div class="marquee">
+      <div class="marquee-track" aria-hidden="true">
+        <div class="marquee-group">
+          <span class="w">We</span><span class="w">Create</span>
+          <span class="stk star" aria-hidden="true"><svg><use href="#s-star"/></svg></span>
+          <span class="w outline">Award</span>
+          <span class="stk pic rot-r" aria-hidden="true"><img src="assets/img/cutouts/kawasaki-sign.webp" srcset="assets/img/cutouts/kawasaki-sign-400.webp 400w, assets/img/cutouts/kawasaki-sign.webp 600w" sizes="(min-width: 900px) 20vw, 120px" width="600" height="335" style="aspect-ratio:600/335" alt="" loading="lazy"></span>
+          <span class="w">Winning</span>
+          <span class="stk arrow" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+          <span class="w">Signs</span>
+          <span class="stk bolt" aria-hidden="true"><svg><use href="#s-bolt"/></svg></span>
+          <span class="stk pic rot-l" aria-hidden="true"><img src="assets/img/cutouts/bloomfield-hills-sign.webp" srcset="assets/img/cutouts/bloomfield-hills-sign-400.webp 400w, assets/img/cutouts/bloomfield-hills-sign.webp 800w" sizes="(min-width: 900px) 20vw, 120px" width="800" height="390" style="aspect-ratio:800/390" alt="" loading="lazy"></span>
+        </div>
+        <div class="marquee-group">
+          <span class="w">We</span><span class="w">Create</span>
+          <span class="stk star" aria-hidden="true"><svg><use href="#s-star"/></svg></span>
+          <span class="w outline">Award</span>
+          <span class="stk pic rot-r" aria-hidden="true"><img src="assets/img/cutouts/kawasaki-sign.webp" srcset="assets/img/cutouts/kawasaki-sign-400.webp 400w, assets/img/cutouts/kawasaki-sign.webp 600w" sizes="(min-width: 900px) 20vw, 120px" width="600" height="335" style="aspect-ratio:600/335" alt="" loading="lazy"></span>
+          <span class="w">Winning</span>
+          <span class="stk arrow" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+          <span class="w">Signs</span>
+          <span class="stk bolt" aria-hidden="true"><svg><use href="#s-bolt"/></svg></span>
+          <span class="stk pic rot-l" aria-hidden="true"><img src="assets/img/cutouts/bloomfield-hills-sign.webp" srcset="assets/img/cutouts/bloomfield-hills-sign-400.webp 400w, assets/img/cutouts/bloomfield-hills-sign.webp 800w" sizes="(min-width: 900px) 20vw, 120px" width="800" height="390" style="aspect-ratio:800/390" alt="" loading="lazy"></span>
+        </div>
+      </div>
+      <button class="marquee-btn" type="button" aria-pressed="false" aria-label="Pause marquee">
+        <svg class="ico-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        <svg class="ico-play" aria-hidden="true"><use href="#i-play"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- AMPLIFY — white. Copy: dempsterdesigns.com/ section 2 -->
+  <section class="section t-light" data-theme="light" aria-labelledby="amp-h">
+    <div class="wrap">
+      <h2 class="display h-lg reveal" id="amp-h" style="max-width: 12ch;">Comprehensive Solutions That Amplify Your Message</h2>
+      <div class="trio" data-stagger=".reveal">
+        <div class="reveal"><span class="n" aria-hidden="true">01</span><h3 class="h-sm">Strategic Brand Development</h3><p>Integrating research, creativity, and precision for impact.</p></div>
+        <div class="reveal"><span class="n" aria-hidden="true">02</span><h3 class="h-sm">Expert Fabrication Capabilities</h3><p>Utilizing cutting-edge materials and proven construction methods.</p></div>
+        <div class="reveal"><span class="n" aria-hidden="true">03</span><h3 class="h-sm">Full-Spectrum Creative Services</h3><p>Delivering integrated campaigns with consistent, compelling messaging.</p></div>
+      </div>
+      <p class="reveal" style="margin-top: 40px; --i:3"><a class="btn ghost" href="what-we-offer.html">What We Offer</a></p>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK — black. Four projects named in the brief; copy: /what-we-offer/ "Our Work, Your Vision" -->
+  <section class="section t-dark" data-theme="dark" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display h-lg reveal" id="work-h">Our Work, Your Vision</h2>
+        <p class="lede reveal" style="--i:1">For over six decades, we have delivered standout creative for clients nationwide, backed by steady expertise. Connect with us today.</p>
+      </div>
+      <div class="strip">
+        <figure class="s1 reveal" style="--i:0"><div class="frame"><img src="assets/img/w900/rsw_1440h_1440-2.webp" srcset="assets/img/w450/rsw_1440h_1440-2.webp 450w, assets/img/w900/rsw_1440h_1440-2.webp 900w, assets/img/rsw_1440h_1440-2.webp 1056w" sizes="(min-width: 900px) 32vw, 58vw" width="1056" height="976" alt="City of Bloomfield Hills entrance sign with flowers" loading="lazy" decoding="async"></div><figcaption>City of Bloomfield Hills entrance sign</figcaption></figure>
+        <figure class="s2 reveal" style="--i:1"><div class="frame"><img src="assets/img/w900/IMG_1731.webp" srcset="assets/img/w450/IMG_1731.webp 450w, assets/img/w900/IMG_1731.webp 900w, assets/img/IMG_1731.jpeg 1040w" sizes="(min-width: 900px) 24vw, 42vw" width="1040" height="992" alt="Kawasaki Robotics North American Training Center sign" loading="lazy" decoding="async"></div><figcaption>Kawasaki Robotics North American Training Center sign</figcaption></figure>
+        <figure class="s3 reveal" style="--i:2"><div class="frame"><img src="assets/img/w900/highlight-16-v2_image-15-1.webp" srcset="assets/img/w450/highlight-16-v2_image-15-1.webp 450w, assets/img/w900/highlight-16-v2_image-15-1.webp 900w, assets/img/highlight-16-v2_image-15-1.webp 1600w" sizes="(min-width: 900px) 24vw, 42vw" width="1600" height="1252" alt="IT Disposal USA truck on street" loading="lazy" decoding="async"></div><figcaption>IT Disposal USA truck</figcaption></figure>
+        <figure class="s4 reveal" style="--i:3"><div class="frame"><img src="assets/img/w900/highlight-16-v3_image-4-1.webp" srcset="assets/img/w450/highlight-16-v3_image-4-1.webp 450w, assets/img/w900/highlight-16-v3_image-4-1.webp 900w, assets/img/highlight-16-v3_image-4-1.webp 1600w" sizes="(min-width: 900px) 16vw, 58vw" width="1600" height="1535" alt="Medical van in urban setting" loading="lazy" decoding="async"></div><figcaption>Medical van</figcaption></figure>
+      </div>
+      <p class="reveal" style="margin-top: 48px;"><a class="btn" href="gallery.html">View Gallery</a></p>
+    </div>
+  </section>
+
+  <!-- VIDEO BAND — mp4 from the live homepage. Heading: /gallery/ H1. Autoplay only without prefers-reduced-motion (main.js).
+       TODO: no poster frame exists in the media library — using the "Vintage van painted with colorful flowers" gallery image
+       (hero-4-v2_background_image-4-1) as the poster until the client supplies a still from the video. -->
+  <section class="video-band" data-theme="dark" aria-labelledby="vid-h">
+    <video muted loop playsinline preload="none" poster="assets/img/w900/hero-4-v2_background_image-4-1.webp" width="1920" height="985" aria-label="Dempster Designs showreel">
+      <source src="assets/video/69fb486433ff2__users_0d779465-c4d6-43a5-8a82-427ff48f7d34_generated_34b14853-68b7-4f55-b439-06d149718f51_generated_video-1.mp4" type="video/mp4">
+    </video>
+    <div class="cap">
+      <div class="cap-row">
+        <h2 class="display reveal" id="vid-h">Showcasing Over Six Decades of Creative Excellence</h2>
+        <button class="vid-btn" type="button" aria-pressed="false" aria-label="Play video">
+          <svg class="ico-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="ico-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+      </div>
+      <p class="reveal" style="--i:1">Explore our portfolio of signage, branding, and creative projects in action.</p>
+    </div>
+  </section>
+
+  <!-- SIX DECADES — white. Copy: dempsterdesigns.com/ + process photos (captions are gallery alt text) -->
+  <section class="section t-light" data-theme="light" aria-labelledby="dec-h">
+    <div class="wrap split">
+      <div>
+        <h2 class="display h-lg reveal" id="dec-h">Six Decades of Crafting Visual Excellence</h2>
+        <div class="prose reveal" style="margin-top: 32px; --i:1">
+          <p>For over 60 years, Dempster Designs has led the signage and design industry by blending evolving technology with timeless visual communication principles. Our reputation is built on quality craftsmanship and a deep respect for every client's vision, investment, and brand.</p>
+          <p>We deliver everything from brand identity and promotional materials to event and campaign design with precision and professionalism. Using durable materials and expert installation, we ensure every piece achieves maximum impact.</p>
+          <p>Our strength lies in integrating visual, print, and audio elements to create cohesive, engaging brand experiences. From custom illustrations and photography to music and radio support, we provide end-to-end creative solutions-helping businesses communicate clearly, stand out, and grow.</p>
+        </div>
+        <p class="reveal" style="margin-top: 32px; --i:2"><a class="btn ghost" href="about.html">Learn More About Us</a></p>
+      </div>
+      <div class="collage" data-stagger="figure">
+        <figure class="c1 reveal"><img src="assets/img/w900/IMG_1554.webp" srcset="assets/img/w450/IMG_1554.webp 450w, assets/img/w900/IMG_1554.webp 900w, assets/img/IMG_1554.jpeg 1008w" sizes="(min-width: 900px) 38vw, 60vw" width="1008" height="1008" alt="Blueprint of The Franklin signage design" loading="lazy" decoding="async"><figcaption>Blueprint of The Franklin signage design</figcaption></figure>
+        <figure class="c2 reveal"><img src="assets/img/w900/IMG_1591.webp" srcset="assets/img/w450/IMG_1591.webp 450w, assets/img/w900/IMG_1591.webp 900w, assets/img/IMG_1591.webp 1142w" sizes="(min-width: 900px) 19vw, 30vw" width="1142" height="1600" alt="Vintage radio station blueprint design" loading="lazy" decoding="async"><figcaption>Vintage radio station blueprint design</figcaption></figure>
+        <figure class="c3 reveal"><img src="assets/img/w900/IMG_1737.webp" srcset="assets/img/w450/IMG_1737.webp 450w, assets/img/w900/IMG_1737.webp 900w, assets/img/IMG_1737.jpeg 1168w" sizes="(min-width: 900px) 28vw, 45vw" width="1168" height="880" alt="Two men shaking hands by red wood chipper" loading="lazy" decoding="async"><figcaption>Two men shaking hands by red wood chipper</figcaption></figure>
+        <figure class="c4 reveal"><img src="assets/img/w900/benefit-4-v3_feature_image-4-1.webp" srcset="assets/img/w450/benefit-4-v3_feature_image-4-1.webp 450w, assets/img/w900/benefit-4-v3_feature_image-4-1.webp 900w, assets/img/benefit-4-v3_feature_image-4-1.webp 1600w" sizes="(min-width: 900px) 28vw, 45vw" width="1600" height="1475" alt="Honoring the best nurses banner" loading="lazy" decoding="async"><figcaption>Honoring the best nurses banner</figcaption></figure>
+        <figure class="c5 reveal"><img src="assets/img/w900/IMG_1660.webp" srcset="assets/img/w450/IMG_1660.webp 450w, assets/img/w900/IMG_1660.webp 900w, assets/img/IMG_1660.jpeg 1320w" sizes="(min-width: 900px) 28vw, 45vw" width="1320" height="1484" alt="Group viewing Detroit Press Club mural" loading="lazy" decoding="async"><figcaption>Group viewing Detroit Press Club mural</figcaption></figure>
+        <figure class="c6 reveal"><img src="assets/img/w900/rsw_1440h_1440-4.webp" srcset="assets/img/w450/rsw_1440h_1440-4.webp 450w, assets/img/w900/rsw_1440h_1440-4.webp 784w" sizes="(min-width: 900px) 28vw, 45vw" width="784" height="1312" alt="Man in sunglasses pointing at signage collage" loading="lazy" decoding="async"><figcaption>Man in sunglasses pointing at signage collage</figcaption></figure>
+        <span class="deco" style="left: 34%; top: -6%; width: clamp(60px, 7vw, 110px); transform: rotate(-30deg);" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+        <span class="deco" style="right: -2%; bottom: 8%; width: clamp(40px, 5vw, 80px);" aria-hidden="true"><svg><use href="#s-star"/></svg></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — second stacked-word moment. Copy: dempsterdesigns.com/ "Let's Start Your Project". -->
+  <section class="section cta t-dark" data-theme="dark" aria-labelledby="cta-h">
+    <div class="wrap">
+      <div class="ring reveal">
+        <span class="deco d1" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+        <span class="deco d2" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+        <span class="deco d3" aria-hidden="true"><svg><use href="#s-arrow2"/></svg></span>
+        <span class="deco d4" aria-hidden="true"><svg><use href="#s-curve"/></svg></span>
+        <span class="deco d5" aria-hidden="true"><svg><use href="#s-star"/></svg></span>
+        <h2 class="stack" id="cta-h" data-fit="0.9">
+          <span class="line"><span class="w">Let’s</span> <span class="w outline">Start</span></span>
+          <span class="line"><span class="w">Your</span></span>
+          <span class="line"><span class="w">Project</span></span>
+        </h2>
+      </div>
+      <div class="prose reveal" style="--i:1">
+        <p>Have a project in mind or need expert guidance? We’re here to help bring your ideas to life with thoughtful design and reliable execution.</p>
+        <p>Reach out to discuss your goals, request a quote, or learn more about our services. Our team will respond promptly and guide you through the next steps.</p>
+      </div>
+      <a class="btn big reveal" style="--i:2" href="contact.html">Start the Conversation</a>
+    </div>
+  </section>
+<a class="fab btn" href="contact.html">Start the Conversation</a>
+
+</main>
+
+
+
+<footer class="site-foot t-dark" data-theme="dark">
+
+  <div class="wrap">
+
+    <div class="cols">
+
+      <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+        <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="" loading="lazy">
+
+        <span>Dempster Designs</span>
+
+      </a>
+
+      <nav aria-label="Footer">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="what-we-offer.html">What We Offer</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <address>
+
+        P.O. Box 831<br>Bloomfield Hills, MI 48304<br>
+
+        <a href="tel:+12483989999">(248) 398-9999</a><br>
+
+        <a href="mailto:designsbydempster@gmail.com">designsbydempster@gmail.com</a>
+
+      </address>
+
+    </div>
+
+    <small>© <span id="year">2026</span>, Dempster Designs. All Rights Reserved.</small>
+
+  </div>
+
+</footer>
+
+
+
+<script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>
+

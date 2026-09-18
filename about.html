@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>About — Dempster Designs</title>
+
+  <meta name="description" content="Learn about our journey, values, and the experience behind every project we deliver.">
+
+  <meta name="theme-color" content="#0b0b0c">
+
+  <link rel="icon" href="assets/img/figma_1_260.png" type="image/png">
+
+  <!-- Fonts: Big Shoulders Display + Instrument Sans from Google Fonts, self-hosted as variable woff2 (see assets/css/style.css).
+
+       Zero external requests. Google Fonts equivalent if preferred:
+
+       https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Sans:wght@400;600;700&display=swap -->
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/BigShouldersDisplay-var.woff2" crossorigin>
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InstrumentSans-var.woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+
+<!-- ===== Inline SVG sticker sprite (referenced with <use>) — no extra requests ===== -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+
+  <defs>
+
+    <symbol id="s-star" viewBox="0 0 100 100"><path d="M50 6 L61 37 L94 38 L67 58 L77 91 L50 71 L23 91 L33 58 L6 38 L39 37 Z" fill="var(--lime-fill, #b4ff2a)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-bolt" viewBox="0 0 60 100"><path d="M36 3 L8 56 L28 54 L20 97 L54 40 L33 43 Z" fill="var(--blue, #2f7bff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow" viewBox="0 0 160 100"><path d="M6 78 C 30 20, 70 14, 96 44 C 112 62, 128 66, 146 48" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M124 34 L150 44 L138 68" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow2" viewBox="0 0 160 60"><path d="M6 32 C 40 26, 80 36, 148 28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M124 8 L152 28 L122 50" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-hand" viewBox="0 0 120 100"><path d="M8 46 C 4 40, 10 32, 18 34 L 70 36 L 70 12 C 70 4, 82 4, 82 12 L 82 36 L 100 40 C 110 42, 112 50, 108 56 L 108 62 C 110 70, 106 76, 100 78 L 100 84 C 100 92, 92 96, 84 94 L 40 90 C 26 88, 18 78, 14 66 Z" fill="var(--bg, #fff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M82 40 L 82 56 M 96 58 L 96 76 M 100 62 L 84 62 M 100 78 L 84 78" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-burst" viewBox="0 0 100 100"><g stroke="var(--red, #ff3b3f)" stroke-width="5" stroke-linecap="round"><path d="M50 4 V22 M50 78 V96 M4 50 H22 M78 50 H96 M17 17 L30 30 M70 70 L83 83 M83 17 L70 30 M30 70 L17 83"/></g><circle cx="50" cy="50" r="14" fill="var(--red, #ff3b3f)" stroke="currentColor" stroke-width="4"/></symbol>
+
+    <symbol id="s-squig" viewBox="0 0 200 40"><path d="M4 22 C 24 2, 44 42, 64 22 S 104 2, 124 22 S 164 42, 196 14" fill="none" stroke="var(--blue, #2f7bff)" stroke-width="7" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-aster" viewBox="0 0 100 100"><g stroke="var(--gold, #e2bd57)" stroke-width="12" stroke-linecap="round"><path d="M50 8 V92 M14 29 L86 71 M86 29 L14 71"/></g></symbol>
+
+    <symbol id="s-curve" viewBox="0 0 120 120"><path d="M12 96 C 6 40, 60 6, 104 24" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round"/><path d="M84 8 L108 26 L88 46" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-circle" viewBox="0 0 120 120"><path d="M60 14 C 90 10, 112 30, 108 60 C 104 92, 74 110, 46 104 C 18 98, 6 70, 14 44 C 20 26, 36 16, 54 16" fill="none" stroke="var(--gold, #e2bd57)" stroke-width="6" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-dots" viewBox="0 0 200 60"><circle cx="30" cy="30" r="22" fill="rgba(255,255,255,.55)"/><path d="M100 46 L80 28 C74 22 76 12 86 12 C92 12 97 16 100 21 C103 16 108 12 114 12 C124 12 126 22 120 28 Z" fill="rgba(255,255,255,.85)"/><circle cx="170" cy="30" r="22" fill="rgba(255,255,255,.55)"/></symbol>
+    <symbol id="s-dotarrow" viewBox="0 0 120 100"><g fill="var(--gold, #e2bd57)"><circle cx="10" cy="50" r="6"/><circle cx="28" cy="50" r="6"/><circle cx="46" cy="50" r="6"/><circle cx="64" cy="50" r="6"/><circle cx="82" cy="50" r="6"/><circle cx="64" cy="32" r="6"/><circle cx="64" cy="68" r="6"/><circle cx="82" cy="20" r="6"/><circle cx="82" cy="80" r="6"/><circle cx="100" cy="50" r="6"/><circle cx="46" cy="20" r="6"/><circle cx="46" cy="80" r="6"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4 H10 V20 H6 Z M14 4 H18 V20 H14 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+  </defs>
+
+</svg>
+
+
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+
+  <div class="wrap">
+
+    <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+      <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="">
+
+      <span>Dempster Designs</span>
+
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+
+      <span class="lbl">Menu</span>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-we-offer.html">What We Offer</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main id="main">
+
+
+
+  <!-- PAGE HERO — full-bleed photo backdrop, heading aligned to the bottom (thesigngroup service-page pattern). Copy: live page H1 + lede -->
+
+  <section class="page-hero t-dark" data-theme="dark" style="--pos: 50% 40%">
+
+    <div class="ph-bg"><img src="assets/img/w900/highlight-16_image-5-1.webp" srcset="assets/img/w450/highlight-16_image-5-1.webp 450w, assets/img/w900/highlight-16_image-5-1.webp 900w, assets/img/highlight-16_image-5-1.webp 1493w" sizes="100vw" width="1493" height="1600" alt="Modern office building with blue sky" fetchpriority="high" data-parallax="0.18" style="--py:0"></div>
+
+    <div class="float" aria-hidden="true"><img src="assets/img/cutouts/bloomfield-hills-sign.webp" srcset="assets/img/cutouts/bloomfield-hills-sign-400.webp 400w, assets/img/cutouts/bloomfield-hills-sign.webp 800w" sizes="16vw" width="800" height="390" alt="" loading="lazy"></div>
+
+    <div class="wrap ph-inner">
+
+      <p class="crumbs"><a href="index.html">Home</a><svg aria-hidden="true"><use href="#i-chev"/></svg><span>About</span></p>
+
+      <h1 class="stack sm" id="ph" data-fit="0.6">
+
+        <span class="line"><span class="w">Decades of</span><span class="stk aster desk-only" aria-hidden="true"><svg><use href="#s-aster"/></svg></span></span>
+        <span class="line"><span class="w outline">Craftsmanship</span></span>
+        <span class="line"><span class="w">and Creative</span></span>
+        <span class="line"><span class="w">Expertise</span><span class="stk star drop" aria-hidden="true"><svg><use href="#s-star"/></svg></span></span>
+
+      </h1>
+
+      <p class="lede reveal">Learn about our journey, values, and the experience behind every project we deliver.</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MEET THE ARTIST — white. Copy: /about/ verbatim; portrait from that page -->
+  <section class="section t-light" data-theme="light" aria-labelledby="ma-h">
+    <div class="wrap artist">
+      <div>
+        <div class="print portrait reveal"><img src="assets/img/w900/69fb49124e9c8_0D68BEE2-954B-40B3-8E95-3A30449027D7-1.webp" srcset="assets/img/w450/69fb49124e9c8_0D68BEE2-954B-40B3-8E95-3A30449027D7-1.webp 450w, assets/img/w900/69fb49124e9c8_0D68BEE2-954B-40B3-8E95-3A30449027D7-1.webp 900w, assets/img/69fb49124e9c8_0D68BEE2-954B-40B3-8E95-3A30449027D7-1.jpeg 944w" sizes="(min-width: 900px) 34vw, 90vw" width="944" height="1088" alt="Smiling older man in front of city skyline" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="prose">
+        <h2 class="display h-lg reveal" id="ma-h">Meet the Artist</h2>
+        <p class="h-sm reveal" style="margin: 22px 0 20px; color: var(--ink); --i:1">The Art of Design, Signs &amp; Branding</p>
+        <div class="reveal" style="--i:2">
+        <p>Since its founding in 1969, Dempster Designs has been a leader in creating exceptional visual solutions for businesses, events, and charities across America and internationally. With a deep commitment to creativity and community, our studio specializes in crafting captivating images that strengthen brand identity and celebrate meaningful occasions.</p>
+        <p>Robert Dempster is the eldest of nine children. He began his artistic journey watching his father hand-paint signs as his third job while supporting the family.</p>
+        <details class="more">
+          <summary><span class="lbl">Read More</span></summary>
+          <div class="inner">
+            <p>In 1971, after a serious car accident and a period of healing, Robert founded The Renaissance Art Gallery in Detroit’s historic Greektown. He later moved to Birmingham, Michigan, where he built a successful painting company and began creating large-scale murals on buildings throughout the city.</p>
+            <p>Robert truly hit his stride when he founded Artwear, a sportswear printing company right here in Birmingham. The timing was perfect for custom T-shirt designs and community branding. After eleven highly successful years, he sold Artwear and launched Speedy Tees, a franchise T-shirt company that quickly grew to seven stores in the Birmingham area.</p>
+            <p>Driven by his entrepreneurial spirit, Robert next expanded into a full range of creative services: fine art, painting, signs, sportswear, and posters. He has also pursued his passion for music as an on-air radio personality while remaining a dedicated community and church advocate.</p>
+          </div>
+        </details>
+        </div>
+
+        <!-- TODO: confirm dates with client.
+             rgdempster.com/bio was unreachable (DNS failure) when this was built, so every entry below comes from
+             dempsterdesigns.com/about or from a caption inside a gallery photo. The about page says "founding in 1969";
+             the brief says the bio gives 1991, and "Our History" says "more than 30 years". Artwear (bio: 1975),
+             Studio D (bio: 2010) and the Key to the City for the Woodward Avenue entrance signs are left out until confirmed. -->
+        <ol class="timeline" aria-label="Milestones" data-stagger="li">
+          <li class="reveal"><span class="yr">1969</span><span>Dempster Designs founded</span></li>
+          <li class="reveal"><span class="yr">1971</span><span>The Renaissance Art Gallery, Detroit’s historic Greektown</span></li>
+          <li class="reveal"><span class="yr">1978</span><span>Detroit Press Club Mural</span></li>
+        </ol>
+        <p class="todo">TODO: confirm dates with client</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL-BLEED with parallax — the Gentherm photo is the second image on the live about page -->
+  <figure class="bleed" data-theme="dark">
+    <img src="assets/img/w900/IMG_1905.webp" srcset="assets/img/w450/IMG_1905.webp 450w, assets/img/w900/IMG_1905.webp 900w, assets/img/IMG_1905.jpeg 1008w" sizes="100vw" width="1008" height="1024" alt="Gentherm corporate sign with orange purple logo" loading="lazy" decoding="async" data-parallax="0.12" style="--py:0">
+    <figcaption>Gentherm corporate sign with orange purple logo</figcaption>
+  </figure>
+
+  <!-- OUR HISTORY — black band. Copy: /about/ -->
+  <section class="section t-dark" data-theme="dark" aria-labelledby="oh-h">
+    <div class="wrap split">
+      <div>
+        <h2 class="display h-lg reveal" id="oh-h">Our History</h2>
+        <span class="stk arrow reveal" style="width: clamp(90px, 10vw, 150px); margin-top: 20px; transform: rotate(35deg); --i:1" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+      </div>
+      <div class="prose">
+        <div class="reveal">
+        <p>For more than 30 years, Dempster Designs has specialized in high-impact signs, vehicle wraps, and complete branding solutions for radio stations, automotive companies, healthcare providers, and many other industries.</p>
+        <p>We pride ourselves on building strong local partnerships and truly understanding each client’s unique vision and values. From vibrant promotional materials to elegant signs, banners, and landscapes, our work is defined by artistry, meticulous attention to detail, and an unwavering commitment to excellence.</p>
+        <p>At Dempster Designs, we believe in the power of visual storytelling. We are passionate about creating lasting connections through our creative services. Let us help bring your ideas to life.</p>
+        </div>
+        <div class="collage" style="margin-top: 48px;" data-stagger="figure">
+          <figure class="c1 reveal"><img src="assets/img/w900/IMG_1660.webp" srcset="assets/img/w450/IMG_1660.webp 450w, assets/img/w900/IMG_1660.webp 900w, assets/img/IMG_1660.jpeg 1320w" sizes="(min-width: 900px) 38vw, 60vw" width="1320" height="1484" alt="Group viewing Detroit Press Club mural" loading="lazy" decoding="async"><figcaption>Group viewing Detroit Press Club mural</figcaption></figure>
+          <figure class="c2 reveal"><img src="assets/img/w900/rsw_1440h_1440-4.webp" srcset="assets/img/w450/rsw_1440h_1440-4.webp 450w, assets/img/w900/rsw_1440h_1440-4.webp 784w" sizes="(min-width: 900px) 19vw, 30vw" width="784" height="1312" alt="Man in sunglasses pointing at signage collage" loading="lazy" decoding="async"><figcaption>Man in sunglasses pointing at signage collage</figcaption></figure>
+          <figure class="c3 reveal"><img src="assets/img/w900/benefit-12-v3_image1-1-1.webp" srcset="assets/img/w450/benefit-12-v3_image1-1-1.webp 450w, assets/img/w900/benefit-12-v3_image1-1-1.webp 900w, assets/img/benefit-12-v3_image1-1-1.png 1107w" sizes="(min-width: 900px) 28vw, 45vw" width="1107" height="769" alt="Colorful Birmingham mural with rainbow design" loading="lazy" decoding="async"><figcaption>Colorful Birmingham mural with rainbow design</figcaption></figure>
+          <figure class="c4 reveal"><img src="assets/img/w900/IMG_1207.webp" srcset="assets/img/w450/IMG_1207.webp 450w, assets/img/w900/IMG_1207.webp 900w, assets/img/IMG_1207.jpeg 960w" sizes="(min-width: 900px) 28vw, 45vw" width="960" height="960" alt="Studio D promotional image" loading="lazy" decoding="async"><figcaption>Studio D promotional image</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — second stacked-word moment. Copy: dempsterdesigns.com/ "Let's Start Your Project". -->
+  <section class="section cta t-light" data-theme="light" aria-labelledby="cta-h">
+    <div class="wrap">
+      <div class="ring reveal">
+        <span class="deco d1" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+        <span class="deco d2" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span>
+        <span class="deco d3" aria-hidden="true"><svg><use href="#s-arrow2"/></svg></span>
+        <span class="deco d4" aria-hidden="true"><svg><use href="#s-curve"/></svg></span>
+        <span class="deco d5" aria-hidden="true"><svg><use href="#s-star"/></svg></span>
+        <h2 class="stack" id="cta-h" data-fit="0.9">
+          <span class="line"><span class="w">Let’s</span> <span class="w outline">Start</span></span>
+          <span class="line"><span class="w">Your</span></span>
+          <span class="line"><span class="w">Project</span></span>
+        </h2>
+      </div>
+      <div class="prose reveal" style="--i:1">
+        <p>Have a project in mind or need expert guidance? We’re here to help bring your ideas to life with thoughtful design and reliable execution.</p>
+        <p>Reach out to discuss your goals, request a quote, or learn more about our services. Our team will respond promptly and guide you through the next steps.</p>
+      </div>
+      <a class="btn big reveal" style="--i:2" href="contact.html">Start the Conversation</a>
+    </div>
+  </section>
+<a class="fab btn" href="contact.html">Start the Conversation</a>
+
+</main>
+
+
+
+<footer class="site-foot t-dark" data-theme="dark">
+
+  <div class="wrap">
+
+    <div class="cols">
+
+      <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+        <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="" loading="lazy">
+
+        <span>Dempster Designs</span>
+
+      </a>
+
+      <nav aria-label="Footer">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="what-we-offer.html">What We Offer</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <address>
+
+        P.O. Box 831<br>Bloomfield Hills, MI 48304<br>
+
+        <a href="tel:+12483989999">(248) 398-9999</a><br>
+
+        <a href="mailto:designsbydempster@gmail.com">designsbydempster@gmail.com</a>
+
+      </address>
+
+    </div>
+
+    <small>© <span id="year">2026</span>, Dempster Designs. All Rights Reserved.</small>
+
+  </div>
+
+</footer>
+
+
+
+<script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>
+

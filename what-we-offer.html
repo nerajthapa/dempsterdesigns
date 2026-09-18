@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>What We Offer — Dempster Designs</title>
+
+  <meta name="description" content="Discover tailored design, signage, and media services built to elevate your brand.">
+
+  <meta name="theme-color" content="#0b0b0c">
+
+  <link rel="icon" href="assets/img/figma_1_260.png" type="image/png">
+
+  <!-- Fonts: Big Shoulders Display + Instrument Sans from Google Fonts, self-hosted as variable woff2 (see assets/css/style.css).
+
+       Zero external requests. Google Fonts equivalent if preferred:
+
+       https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Sans:wght@400;600;700&display=swap -->
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/BigShouldersDisplay-var.woff2" crossorigin>
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InstrumentSans-var.woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+
+<!-- ===== Inline SVG sticker sprite (referenced with <use>) — no extra requests ===== -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+
+  <defs>
+
+    <symbol id="s-star" viewBox="0 0 100 100"><path d="M50 6 L61 37 L94 38 L67 58 L77 91 L50 71 L23 91 L33 58 L6 38 L39 37 Z" fill="var(--lime-fill, #b4ff2a)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-bolt" viewBox="0 0 60 100"><path d="M36 3 L8 56 L28 54 L20 97 L54 40 L33 43 Z" fill="var(--blue, #2f7bff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow" viewBox="0 0 160 100"><path d="M6 78 C 30 20, 70 14, 96 44 C 112 62, 128 66, 146 48" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M124 34 L150 44 L138 68" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow2" viewBox="0 0 160 60"><path d="M6 32 C 40 26, 80 36, 148 28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M124 8 L152 28 L122 50" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-hand" viewBox="0 0 120 100"><path d="M8 46 C 4 40, 10 32, 18 34 L 70 36 L 70 12 C 70 4, 82 4, 82 12 L 82 36 L 100 40 C 110 42, 112 50, 108 56 L 108 62 C 110 70, 106 76, 100 78 L 100 84 C 100 92, 92 96, 84 94 L 40 90 C 26 88, 18 78, 14 66 Z" fill="var(--bg, #fff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M82 40 L 82 56 M 96 58 L 96 76 M 100 62 L 84 62 M 100 78 L 84 78" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-burst" viewBox="0 0 100 100"><g stroke="var(--red, #ff3b3f)" stroke-width="5" stroke-linecap="round"><path d="M50 4 V22 M50 78 V96 M4 50 H22 M78 50 H96 M17 17 L30 30 M70 70 L83 83 M83 17 L70 30 M30 70 L17 83"/></g><circle cx="50" cy="50" r="14" fill="var(--red, #ff3b3f)" stroke="currentColor" stroke-width="4"/></symbol>
+
+    <symbol id="s-squig" viewBox="0 0 200 40"><path d="M4 22 C 24 2, 44 42, 64 22 S 104 2, 124 22 S 164 42, 196 14" fill="none" stroke="var(--blue, #2f7bff)" stroke-width="7" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-aster" viewBox="0 0 100 100"><g stroke="var(--gold, #e2bd57)" stroke-width="12" stroke-linecap="round"><path d="M50 8 V92 M14 29 L86 71 M86 29 L14 71"/></g></symbol>
+
+    <symbol id="s-curve" viewBox="0 0 120 120"><path d="M12 96 C 6 40, 60 6, 104 24" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round"/><path d="M84 8 L108 26 L88 46" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-circle" viewBox="0 0 120 120"><path d="M60 14 C 90 10, 112 30, 108 60 C 104 92, 74 110, 46 104 C 18 98, 6 70, 14 44 C 20 26, 36 16, 54 16" fill="none" stroke="var(--gold, #e2bd57)" stroke-width="6" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-dots" viewBox="0 0 200 60"><circle cx="30" cy="30" r="22" fill="rgba(255,255,255,.55)"/><path d="M100 46 L80 28 C74 22 76 12 86 12 C92 12 97 16 100 21 C103 16 108 12 114 12 C124 12 126 22 120 28 Z" fill="rgba(255,255,255,.85)"/><circle cx="170" cy="30" r="22" fill="rgba(255,255,255,.55)"/></symbol>
+    <symbol id="s-dotarrow" viewBox="0 0 120 100"><g fill="var(--gold, #e2bd57)"><circle cx="10" cy="50" r="6"/><circle cx="28" cy="50" r="6"/><circle cx="46" cy="50" r="6"/><circle cx="64" cy="50" r="6"/><circle cx="82" cy="50" r="6"/><circle cx="64" cy="32" r="6"/><circle cx="64" cy="68" r="6"/><circle cx="82" cy="20" r="6"/><circle cx="82" cy="80" r="6"/><circle cx="100" cy="50" r="6"/><circle cx="46" cy="20" r="6"/><circle cx="46" cy="80" r="6"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4 H10 V20 H6 Z M14 4 H18 V20 H14 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+  </defs>
+
+</svg>
+
+
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+
+  <div class="wrap">
+
+    <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+      <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="">
+
+      <span>Dempster Designs</span>
+
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+
+      <span class="lbl">Menu</span>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-we-offer.html" aria-current="page">What We Offer</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main id="main">
+
+
+
+  <!-- PAGE HERO — full-bleed photo backdrop, heading aligned to the bottom (thesigngroup service-page pattern). Copy: live page H1 + lede -->
+
+  <section class="page-hero t-dark" data-theme="dark" style="--pos: 50% 55%">
+
+    <div class="ph-bg"><img src="assets/img/w900/highlight-16-v1_highlight-16-v1_image.webp" srcset="assets/img/w450/highlight-16-v1_highlight-16-v1_image.webp 450w, assets/img/w900/highlight-16-v1_highlight-16-v1_image.webp 900w, assets/img/highlight-16-v1_highlight-16-v1_image.webp 1920w" sizes="100vw" width="1920" height="1734" alt="Modern physical therapy building exterior" fetchpriority="high" data-parallax="0.18" style="--py:0"></div>
+
+    <div class="float" aria-hidden="true"><img src="assets/img/cutouts/kawasaki-sign.webp" srcset="assets/img/cutouts/kawasaki-sign-400.webp 400w, assets/img/cutouts/kawasaki-sign.webp 600w" sizes="16vw" width="600" height="335" alt="" loading="lazy"></div>
+
+    <div class="wrap ph-inner">
+
+      <p class="crumbs"><a href="index.html">Home</a><svg aria-hidden="true"><use href="#i-chev"/></svg><span>What We Offer</span></p>
+
+      <h1 class="stack sm" id="ph" data-fit="0.6">
+
+        <span class="line"><span class="w">Creative</span><span class="stk squig desk-only" aria-hidden="true"><svg><use href="#s-squig"/></svg></span></span>
+        <span class="line"><span class="w outline">Solutions</span><span class="stk star lift" aria-hidden="true"><svg><use href="#s-star"/></svg></span></span>
+        <span class="line"><span class="w">For Every</span></span>
+        <span class="line"><span class="stk arrow desk-only" aria-hidden="true"><svg><use href="#s-arrow"/></svg></span><span class="w">Brand Need</span></span>
+
+      </h1>
+
+      <p class="lede reveal">Discover tailored design, signage, and media services built to elevate your brand.</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO + feature band — white. Copy: /what-we-offer/ H2 + paragraph; the two images are the ones on that live page -->
+  <section class="section t-light" data-theme="light" aria-labelledby="int-h">
+    <div class="wrap feature">
+      <div>
+        <h2 class="display h-md reveal" id="int-h">Comprehensive Creative Solutions for Every Vision</h2>
+        <div class="prose reveal" style="margin-top: 28px; --i:1">
+          <p>For over 60 years, we've transformed ideas into reality through diverse creative services. Blending craftsmanship with innovation, we deliver solutions that engage audiences and strengthen brands. From visual design and audio production to custom fabrication, every project benefits from our expertise, precision, and commitment to impactful, effective communication.</p>
+        </div>
+      </div>
+      <div class="imgs" data-stagger="figure">
+        <figure class="reveal"><img src="assets/img/w900/highlight-16-v1_highlight-16-v1_image.webp" srcset="assets/img/w450/highlight-16-v1_highlight-16-v1_image.webp 450w, assets/img/w900/highlight-16-v1_highlight-16-v1_image.webp 900w, assets/img/highlight-16-v1_highlight-16-v1_image.webp 1920w" sizes="(min-width: 900px) 28vw, 55vw" width="1920" height="1734" alt="Modern physical therapy building exterior" loading="lazy" decoding="async"><figcaption>Modern physical therapy building exterior</figcaption></figure>
+        <figure class="reveal"><img src="assets/img/w900/benefit-4-v3_feature_image-4-1.webp" srcset="assets/img/w450/benefit-4-v3_feature_image-4-1.webp 450w, assets/img/w900/benefit-4-v3_feature_image-4-1.webp 900w, assets/img/benefit-4-v3_feature_image-4-1.webp 1600w" sizes="(min-width: 900px) 20vw, 40vw" width="1600" height="1475" alt="Honoring the best nurses banner" loading="lazy" decoding="async"><figcaption>Honoring the best nurses banner</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE SERVICES — black band, plain grid of large text links; copy: /what-we-offer/ seven bullets -->
+  <section class="section t-dark" data-theme="dark" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display h-lg reveal" id="svc-h">Signature Services That Bring Brands to Life</h2>
+        <span class="stk squig reveal" style="width: clamp(120px, 14vw, 200px); justify-self: end; --i:1" aria-hidden="true"><svg><use href="#s-squig"/></svg></span>
+      </div>
+      <ul class="svc-grid">
+        <li class="reveal" style="--i:0"><a href="contact.html"><span class="idx">01</span>Develop cohesive brand identities that stand out</a></li>
+        <li class="reveal" style="--i:1"><a href="contact.html"><span class="idx">02</span>Design logos, color palettes, and typography systems</a></li>
+        <li class="reveal" style="--i:2"><a href="contact.html"><span class="idx">03</span>Create style guides for consistent brand use</a></li>
+        <li class="reveal" style="--i:3"><a href="contact.html"><span class="idx">04</span>Ensure designs work across digital and print platforms</a></li>
+        <li class="reveal" style="--i:4"><a href="contact.html"><span class="idx">05</span>Produce brochures, flyers, posters, and catalogs</a></li>
+        <li class="reveal" style="--i:5"><a href="contact.html"><span class="idx">06</span>Maintain high standards in print quality and finishing</a></li>
+        <li class="reveal" style="--i:6"><a href="contact.html"><span class="idx">07</span>Deliver materials that communicate clearly and professionally</a></li>
+      </ul>
+      <p class="reveal" style="margin-top: 40px;"><a class="btn" href="gallery.html">View Portfolio</a></p>
+    </div>
+  </section>
+
+  <!-- OUR WORK, YOUR VISION — white. Copy: /what-we-offer/ -->
+  <section class="section t-light" data-theme="light" aria-labelledby="ow-h">
+    <div class="wrap split rev">
+      <div>
+        <h2 class="display h-lg reveal" id="ow-h">Our Work, Your Vision</h2>
+        <div class="prose reveal" style="margin-top: 28px; --i:1">
+          <p>For over six decades, we have delivered standout creative for clients nationwide, backed by steady expertise. Connect with us today.</p>
+        </div>
+        <p class="reveal" style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; --i:2"><a class="btn" href="contact.html">Contact Us</a><a class="btn ghost" href="gallery.html">View Portfolio</a></p>
+      </div>
+      <div class="strip">
+        <figure class="s1 reveal" style="--i:0"><div class="frame"><img src="assets/img/w900/highlight-16-v2_image-15-1.webp" srcset="assets/img/w450/highlight-16-v2_image-15-1.webp 450w, assets/img/w900/highlight-16-v2_image-15-1.webp 900w, assets/img/highlight-16-v2_image-15-1.webp 1600w" sizes="(min-width: 900px) 24vw, 58vw" width="1600" height="1252" alt="IT Disposal USA truck on street" loading="lazy" decoding="async"></div><figcaption>IT Disposal USA truck</figcaption></figure>
+        <figure class="s2 reveal" style="--i:1"><div class="frame"><img src="assets/img/w900/IMG_1613.webp" srcset="assets/img/w450/IMG_1613.webp 450w, assets/img/w900/IMG_1613.webp 900w, assets/img/IMG_1613.jpeg 1136w" sizes="(min-width: 900px) 16vw, 42vw" width="1136" height="912" alt="Henry Ford Health mobile clinic van in city" loading="lazy" decoding="async"></div><figcaption>Henry Ford Health mobile clinic van in city</figcaption></figure>
+        <figure class="s3 reveal" style="--i:2"><div class="frame"><img src="assets/img/w900/IMG_1905.webp" srcset="assets/img/w450/IMG_1905.webp 450w, assets/img/w900/IMG_1905.webp 900w, assets/img/IMG_1905.jpeg 1008w" sizes="(min-width: 900px) 16vw, 42vw" width="1008" height="1024" alt="Gentherm corporate sign with orange purple logo" loading="lazy" decoding="async"></div><figcaption>Gentherm corporate sign with orange purple logo</figcaption></figure>
+        <figure class="s4 reveal" style="--i:3"><div class="frame"><img src="assets/img/w900/IMG_1743.webp" srcset="assets/img/w450/IMG_1743.webp 450w, assets/img/w900/IMG_1743.webp 880w" sizes="(min-width: 900px) 12vw, 58vw" width="880" height="1168" alt="Royal Oak Lanes bowling alley storefront at dusk" loading="lazy" decoding="async"></div><figcaption>Royal Oak Lanes bowling alley storefront at dusk</figcaption></figure>
+      </div>
+    </div>
+  </section>
+<a class="fab btn" href="contact.html">Start the Conversation</a>
+
+</main>
+
+
+
+<footer class="site-foot t-dark" data-theme="dark">
+
+  <div class="wrap">
+
+    <div class="cols">
+
+      <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+        <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="" loading="lazy">
+
+        <span>Dempster Designs</span>
+
+      </a>
+
+      <nav aria-label="Footer">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="what-we-offer.html">What We Offer</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <address>
+
+        P.O. Box 831<br>Bloomfield Hills, MI 48304<br>
+
+        <a href="tel:+12483989999">(248) 398-9999</a><br>
+
+        <a href="mailto:designsbydempster@gmail.com">designsbydempster@gmail.com</a>
+
+      </address>
+
+    </div>
+
+    <small>© <span id="year">2026</span>, Dempster Designs. All Rights Reserved.</small>
+
+  </div>
+
+</footer>
+
+
+
+<script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>
+

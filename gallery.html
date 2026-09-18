@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Gallery — Dempster Designs</title>
+
+  <meta name="description" content="Explore our portfolio of signage, branding, and creative projects in action.">
+
+  <meta name="theme-color" content="#0b0b0c">
+
+  <link rel="icon" href="assets/img/figma_1_260.png" type="image/png">
+
+  <!-- Fonts: Big Shoulders Display + Instrument Sans from Google Fonts, self-hosted as variable woff2 (see assets/css/style.css).
+
+       Zero external requests. Google Fonts equivalent if preferred:
+
+       https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Sans:wght@400;600;700&display=swap -->
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/BigShouldersDisplay-var.woff2" crossorigin>
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InstrumentSans-var.woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+
+<!-- ===== Inline SVG sticker sprite (referenced with <use>) — no extra requests ===== -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+
+  <defs>
+
+    <symbol id="s-star" viewBox="0 0 100 100"><path d="M50 6 L61 37 L94 38 L67 58 L77 91 L50 71 L23 91 L33 58 L6 38 L39 37 Z" fill="var(--lime-fill, #b4ff2a)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-bolt" viewBox="0 0 60 100"><path d="M36 3 L8 56 L28 54 L20 97 L54 40 L33 43 Z" fill="var(--blue, #2f7bff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow" viewBox="0 0 160 100"><path d="M6 78 C 30 20, 70 14, 96 44 C 112 62, 128 66, 146 48" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M124 34 L150 44 L138 68" fill="none" stroke="var(--red, #ff3b3f)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-arrow2" viewBox="0 0 160 60"><path d="M6 32 C 40 26, 80 36, 148 28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M124 8 L152 28 L122 50" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-hand" viewBox="0 0 120 100"><path d="M8 46 C 4 40, 10 32, 18 34 L 70 36 L 70 12 C 70 4, 82 4, 82 12 L 82 36 L 100 40 C 110 42, 112 50, 108 56 L 108 62 C 110 70, 106 76, 100 78 L 100 84 C 100 92, 92 96, 84 94 L 40 90 C 26 88, 18 78, 14 66 Z" fill="var(--bg, #fff)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M82 40 L 82 56 M 96 58 L 96 76 M 100 62 L 84 62 M 100 78 L 84 78" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-burst" viewBox="0 0 100 100"><g stroke="var(--red, #ff3b3f)" stroke-width="5" stroke-linecap="round"><path d="M50 4 V22 M50 78 V96 M4 50 H22 M78 50 H96 M17 17 L30 30 M70 70 L83 83 M83 17 L70 30 M30 70 L17 83"/></g><circle cx="50" cy="50" r="14" fill="var(--red, #ff3b3f)" stroke="currentColor" stroke-width="4"/></symbol>
+
+    <symbol id="s-squig" viewBox="0 0 200 40"><path d="M4 22 C 24 2, 44 42, 64 22 S 104 2, 124 22 S 164 42, 196 14" fill="none" stroke="var(--blue, #2f7bff)" stroke-width="7" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-aster" viewBox="0 0 100 100"><g stroke="var(--gold, #e2bd57)" stroke-width="12" stroke-linecap="round"><path d="M50 8 V92 M14 29 L86 71 M86 29 L14 71"/></g></symbol>
+
+    <symbol id="s-curve" viewBox="0 0 120 120"><path d="M12 96 C 6 40, 60 6, 104 24" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round"/><path d="M84 8 L108 26 L88 46" fill="none" stroke="var(--lime, #b4ff2a)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="s-circle" viewBox="0 0 120 120"><path d="M60 14 C 90 10, 112 30, 108 60 C 104 92, 74 110, 46 104 C 18 98, 6 70, 14 44 C 20 26, 36 16, 54 16" fill="none" stroke="var(--gold, #e2bd57)" stroke-width="6" stroke-linecap="round"/></symbol>
+
+    <symbol id="s-dots" viewBox="0 0 200 60"><circle cx="30" cy="30" r="22" fill="rgba(255,255,255,.55)"/><path d="M100 46 L80 28 C74 22 76 12 86 12 C92 12 97 16 100 21 C103 16 108 12 114 12 C124 12 126 22 120 28 Z" fill="rgba(255,255,255,.85)"/><circle cx="170" cy="30" r="22" fill="rgba(255,255,255,.55)"/></symbol>
+    <symbol id="s-dotarrow" viewBox="0 0 120 100"><g fill="var(--gold, #e2bd57)"><circle cx="10" cy="50" r="6"/><circle cx="28" cy="50" r="6"/><circle cx="46" cy="50" r="6"/><circle cx="64" cy="50" r="6"/><circle cx="82" cy="50" r="6"/><circle cx="64" cy="32" r="6"/><circle cx="64" cy="68" r="6"/><circle cx="82" cy="20" r="6"/><circle cx="82" cy="80" r="6"/><circle cx="100" cy="50" r="6"/><circle cx="46" cy="20" r="6"/><circle cx="46" cy="80" r="6"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4 H10 V20 H6 Z M14 4 H18 V20 H14 Z" fill="currentColor"/></symbol>
+
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+  </defs>
+
+</svg>
+
+
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+
+  <div class="wrap">
+
+    <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+      <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="">
+
+      <span>Dempster Designs</span>
+
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+
+      <span class="lbl">Menu</span>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-we-offer.html">What We Offer</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main id="main">
+
+
+
+  <!-- PAGE HERO — full-bleed photo backdrop, heading aligned to the bottom (thesigngroup service-page pattern). Copy: live page H1 + lede -->
+
+  <section class="page-hero t-dark" data-theme="dark" style="--pos: 50% 50%">
+
+    <div class="ph-bg"><img src="assets/img/w900/benefit-12-v3_image1-1-1.webp" srcset="assets/img/w450/benefit-12-v3_image1-1-1.webp 450w, assets/img/w900/benefit-12-v3_image1-1-1.webp 900w, assets/img/benefit-12-v3_image1-1-1.png 1107w" sizes="100vw" width="1107" height="769" alt="Colorful Birmingham mural with rainbow design" fetchpriority="high" data-parallax="0.18" style="--py:0"></div>
+
+    <div class="float" aria-hidden="true"><img src="assets/img/cutouts/royal-oak-lanes-sign.webp" srcset="assets/img/cutouts/royal-oak-lanes-sign-400.webp 400w, assets/img/cutouts/royal-oak-lanes-sign.webp 530w" sizes="16vw" width="530" height="260" alt="" loading="lazy"></div>
+
+    <div class="wrap ph-inner">
+
+      <p class="crumbs"><a href="index.html">Home</a><svg aria-hidden="true"><use href="#i-chev"/></svg><span>Gallery</span></p>
+
+      <h1 class="stack sm" id="ph" data-fit="0.6">
+
+        <span class="line"><span class="w">Showcasing</span></span>
+        <span class="line"><span class="stk burst desk-only" aria-hidden="true"><svg><use href="#s-burst"/></svg></span><span class="w outline">Over Six</span><span class="w">Decades</span></span>
+        <span class="line"><span class="w">of Creative</span><span class="stk bolt drop" aria-hidden="true"><svg><use href="#s-bolt"/></svg></span></span>
+        <span class="line"><span class="w">Excellence</span></span>
+
+      </h1>
+
+      <p class="lede reveal">Explore our portfolio of signage, branding, and creative projects in action.</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- COLLAGE — white. Every gallery photo from the live site plus the project photos from the other pages; captions are the live alt text -->
+  <section class="section tight t-light" data-theme="light" aria-label="Portfolio">
+    <div class="wrap">
+      <div class="masonry">
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-2.webp" data-caption="City of Bloomfield Hills entrance sign with flowers" aria-label="Open larger view: City of Bloomfield Hills entrance sign with flowers"><img src="assets/img/w900/rsw_1440h_1440-2.webp" srcset="assets/img/w450/rsw_1440h_1440-2.webp 450w, assets/img/w900/rsw_1440h_1440-2.webp 900w, assets/img/rsw_1440h_1440-2.webp 1056w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1056" height="976" alt="City of Bloomfield Hills entrance sign with flowers" fetchpriority="high"></button>
+          <figcaption><span class="n" aria-hidden="true">01</span>City of Bloomfield Hills entrance sign with flowers</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/IMG_1731.jpeg" data-caption="Kawasaki Robotics North American Training Center sign" aria-label="Open larger view: Kawasaki Robotics North American Training Center sign"><img src="assets/img/w900/IMG_1731.webp" srcset="assets/img/w450/IMG_1731.webp 450w, assets/img/w900/IMG_1731.webp 900w, assets/img/IMG_1731.jpeg 1040w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1040" height="992" alt="Kawasaki Robotics North American Training Center sign" fetchpriority="high"></button>
+          <figcaption><span class="n" aria-hidden="true">02</span>Kawasaki Robotics North American Training Center sign</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/highlight-16-v2_image-15-1.webp" data-caption="IT Disposal USA truck on street" aria-label="Open larger view: IT Disposal USA truck on street"><img src="assets/img/w900/highlight-16-v2_image-15-1.webp" srcset="assets/img/w450/highlight-16-v2_image-15-1.webp 450w, assets/img/w900/highlight-16-v2_image-15-1.webp 900w, assets/img/highlight-16-v2_image-15-1.webp 1600w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1600" height="1252" alt="IT Disposal USA truck on street" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">03</span>IT Disposal USA truck on street</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/highlight-16-v3_image-4-1.webp" data-caption="Medical van in urban setting" aria-label="Open larger view: Medical van in urban setting"><img src="assets/img/w900/highlight-16-v3_image-4-1.webp" srcset="assets/img/w450/highlight-16-v3_image-4-1.webp 450w, assets/img/w900/highlight-16-v3_image-4-1.webp 900w, assets/img/highlight-16-v3_image-4-1.webp 1600w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1600" height="1535" alt="Medical van in urban setting" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">04</span>Medical van in urban setting</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/benefit-4-v3_feature_image-4-1.webp" data-caption="Honoring the best nurses banner" aria-label="Open larger view: Honoring the best nurses banner"><img src="assets/img/w900/benefit-4-v3_feature_image-4-1.webp" srcset="assets/img/w450/benefit-4-v3_feature_image-4-1.webp 450w, assets/img/w900/benefit-4-v3_feature_image-4-1.webp 900w, assets/img/benefit-4-v3_feature_image-4-1.webp 1600w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1600" height="1475" alt="Honoring the best nurses banner" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">05</span>Honoring the best nurses banner</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/highlight-16-v1_highlight-16-v1_image.webp" data-caption="Modern physical therapy building exterior" aria-label="Open larger view: Modern physical therapy building exterior"><img src="assets/img/w900/highlight-16-v1_highlight-16-v1_image.webp" srcset="assets/img/w450/highlight-16-v1_highlight-16-v1_image.webp 450w, assets/img/w900/highlight-16-v1_highlight-16-v1_image.webp 900w, assets/img/highlight-16-v1_highlight-16-v1_image.webp 1920w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1920" height="1734" alt="Modern physical therapy building exterior" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">06</span>Modern physical therapy building exterior</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/highlight-16_image-5-1.webp" data-caption="Modern office building with blue sky" aria-label="Open larger view: Modern office building with blue sky"><img src="assets/img/w900/highlight-16_image-5-1.webp" srcset="assets/img/w450/highlight-16_image-5-1.webp 450w, assets/img/w900/highlight-16_image-5-1.webp 900w, assets/img/highlight-16_image-5-1.webp 1493w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1493" height="1600" alt="Modern office building with blue sky" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">07</span>Modern office building with blue sky</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/IMG_1905.jpeg" data-caption="Gentherm corporate sign with orange purple logo" aria-label="Open larger view: Gentherm corporate sign with orange purple logo"><img src="assets/img/w900/IMG_1905.webp" srcset="assets/img/w450/IMG_1905.webp 450w, assets/img/w900/IMG_1905.webp 900w, assets/img/IMG_1905.jpeg 1008w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1008" height="1024" alt="Gentherm corporate sign with orange purple logo" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">08</span>Gentherm corporate sign with orange purple logo</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/IMG_1743.jpeg" data-caption="Royal Oak Lanes bowling alley storefront at dusk" aria-label="Open larger view: Royal Oak Lanes bowling alley storefront at dusk"><img src="assets/img/w900/IMG_1743.webp" srcset="assets/img/w450/IMG_1743.webp 450w, assets/img/w900/IMG_1743.webp 880w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="880" height="1168" alt="Royal Oak Lanes bowling alley storefront at dusk" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">09</span>Royal Oak Lanes bowling alley storefront at dusk</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/IMG_1782.jpeg" data-caption="WeightWatchers storefront with colorful flower planters" aria-label="Open larger view: WeightWatchers storefront with colorful flower planters"><img src="assets/img/w900/IMG_1782.webp" srcset="assets/img/w450/IMG_1782.webp 450w, assets/img/w900/IMG_1782.webp 900w, assets/img/IMG_1782.jpeg 992w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="992" height="1040" alt="WeightWatchers storefront with colorful flower planters" fetchpriority="high"></button>
+          <figcaption><span class="n" aria-hidden="true">10</span>WeightWatchers storefront with colorful flower planters</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-3.webp" data-caption="Silverman real estate sign with landscaping" aria-label="Open larger view: Silverman real estate sign with landscaping"><img src="assets/img/w900/rsw_1440h_1440-3.webp" srcset="assets/img/w450/rsw_1440h_1440-3.webp 450w, assets/img/w900/rsw_1440h_1440-3.webp 900w, assets/img/rsw_1440h_1440-3.webp 1040w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1040" height="992" alt="Silverman real estate sign with landscaping" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">11</span>Silverman real estate sign with landscaping</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/IMG_1613.jpeg" data-caption="Henry Ford Health mobile clinic van in city" aria-label="Open larger view: Henry Ford Health mobile clinic van in city"><img src="assets/img/w900/IMG_1613.webp" srcset="assets/img/w450/IMG_1613.webp 450w, assets/img/w900/IMG_1613.webp 900w, assets/img/IMG_1613.jpeg 1136w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1136" height="912" alt="Henry Ford Health mobile clinic van in city" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">12</span>Henry Ford Health mobile clinic van in city</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/5F89F123-AE0E-4151-B992-38B72527E865.jpeg" data-caption="Entrance of Lazy Lizard Cantina with planters" aria-label="Open larger view: Entrance of Lazy Lizard Cantina with planters"><img src="assets/img/w900/5F89F123-AE0E-4151-B992-38B72527E865.webp" srcset="assets/img/w450/5F89F123-AE0E-4151-B992-38B72527E865.webp 450w, assets/img/w900/5F89F123-AE0E-4151-B992-38B72527E865.webp 900w, assets/img/5F89F123-AE0E-4151-B992-38B72527E865.jpeg 1056w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1056" height="976" alt="Entrance of Lazy Lizard Cantina with planters" fetchpriority="high"></button>
+          <figcaption><span class="n" aria-hidden="true">13</span>Entrance of Lazy Lizard Cantina with planters</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/IMG_1660.jpeg" data-caption="Group viewing Detroit Press Club mural" aria-label="Open larger view: Group viewing Detroit Press Club mural"><img src="assets/img/w900/IMG_1660.webp" srcset="assets/img/w450/IMG_1660.webp 450w, assets/img/w900/IMG_1660.webp 900w, assets/img/IMG_1660.jpeg 1320w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1320" height="1484" alt="Group viewing Detroit Press Club mural" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">14</span>Group viewing Detroit Press Club mural</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/IMG_1734.jpeg" data-caption="Kroger supermarket exterior with drive-thru sign" aria-label="Open larger view: Kroger supermarket exterior with drive-thru sign"><img src="assets/img/w900/IMG_1734.webp" srcset="assets/img/w450/IMG_1734.webp 450w, assets/img/w900/IMG_1734.webp 880w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="880" height="1168" alt="Kroger supermarket exterior with drive-thru sign" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">15</span>Kroger supermarket exterior with drive-thru sign</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/IMG_1648-7dbafe63-eb0a-4456-a7ea-f9d11c6a7da4.webp" data-caption="Bloomfield Hills sign with colorful flowerbed" aria-label="Open larger view: Bloomfield Hills sign with colorful flowerbed"><img src="assets/img/w900/IMG_1648-7dbafe63-eb0a-4456-a7ea-f9d11c6a7da4.webp" srcset="assets/img/w450/IMG_1648-7dbafe63-eb0a-4456-a7ea-f9d11c6a7da4.webp 450w, assets/img/w900/IMG_1648-7dbafe63-eb0a-4456-a7ea-f9d11c6a7da4.webp 900w, assets/img/IMG_1648-7dbafe63-eb0a-4456-a7ea-f9d11c6a7da4.webp 1251w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1251" height="1600" alt="Bloomfield Hills sign with colorful flowerbed" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">16</span>Bloomfield Hills sign with colorful flowerbed</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/IMG_1737.jpeg" data-caption="Two men shaking hands by red wood chipper" aria-label="Open larger view: Two men shaking hands by red wood chipper"><img src="assets/img/w900/IMG_1737.webp" srcset="assets/img/w450/IMG_1737.webp 450w, assets/img/w900/IMG_1737.webp 900w, assets/img/IMG_1737.jpeg 1168w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1168" height="880" alt="Two men shaking hands by red wood chipper" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">17</span>Two men shaking hands by red wood chipper</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/IMG_1913.jpeg" data-caption="Statue of Mary on hospital lawn" aria-label="Open larger view: Statue of Mary on hospital lawn"><img src="assets/img/w900/IMG_1913.webp" srcset="assets/img/w450/IMG_1913.webp 450w, assets/img/w900/IMG_1913.webp 900w, assets/img/IMG_1913.jpeg 1008w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1008" height="1024" alt="Statue of Mary on hospital lawn" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">18</span>Statue of Mary on hospital lawn</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-4.webp" data-caption="Man in sunglasses pointing at signage collage" aria-label="Open larger view: Man in sunglasses pointing at signage collage"><img src="assets/img/w900/rsw_1440h_1440-4.webp" srcset="assets/img/w450/rsw_1440h_1440-4.webp 450w, assets/img/w900/rsw_1440h_1440-4.webp 784w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="784" height="1312" alt="Man in sunglasses pointing at signage collage" fetchpriority="high"></button>
+          <figcaption><span class="n" aria-hidden="true">19</span>Man in sunglasses pointing at signage collage</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-5.webp" data-caption="People queuing outside illuminated hotel at night" aria-label="Open larger view: People queuing outside illuminated hotel at night"><img src="assets/img/w900/rsw_1440h_1440-5.webp" srcset="assets/img/w450/rsw_1440h_1440-5.webp 450w, assets/img/w900/rsw_1440h_1440-5.webp 880w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="880" height="1168" alt="People queuing outside illuminated hotel at night" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">20</span>People queuing outside illuminated hotel at night</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/IMG_1207.jpeg" data-caption="Studio D promotional image" aria-label="Open larger view: Studio D promotional image"><img src="assets/img/w900/IMG_1207.webp" srcset="assets/img/w450/IMG_1207.webp 450w, assets/img/w900/IMG_1207.webp 900w, assets/img/IMG_1207.jpeg 960w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="960" height="960" alt="Studio D promotional image" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">21</span>Studio D promotional image</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/IMG_1316.jpeg" data-caption="Hickory Creek sign and clubhouse" aria-label="Open larger view: Hickory Creek sign and clubhouse"><img src="assets/img/w900/IMG_1316.webp" srcset="assets/img/w450/IMG_1316.webp 450w, assets/img/w900/IMG_1316.webp 900w, assets/img/IMG_1316.jpeg 1320w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1320" height="1311" alt="Hickory Creek sign and clubhouse" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">22</span>Hickory Creek sign and clubhouse</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/benefit-12-v3_image1-1-1.png" data-caption="Colorful Birmingham mural with rainbow design" aria-label="Open larger view: Colorful Birmingham mural with rainbow design"><img src="assets/img/w900/benefit-12-v3_image1-1-1.webp" srcset="assets/img/w450/benefit-12-v3_image1-1-1.webp 450w, assets/img/w900/benefit-12-v3_image1-1-1.webp 900w, assets/img/benefit-12-v3_image1-1-1.png 1107w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1107" height="769" alt="Colorful Birmingham mural with rainbow design" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">23</span>Colorful Birmingham mural with rainbow design</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/IMG_1554.jpeg" data-caption="Blueprint of The Franklin signage design" aria-label="Open larger view: Blueprint of The Franklin signage design"><img src="assets/img/w900/IMG_1554.webp" srcset="assets/img/w450/IMG_1554.webp 450w, assets/img/w900/IMG_1554.webp 900w, assets/img/IMG_1554.jpeg 1008w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1008" height="1008" alt="Blueprint of The Franklin signage design" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">24</span>Blueprint of The Franklin signage design</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-6.webp" data-caption="Smiling man in blue blazer on city street" aria-label="Open larger view: Smiling man in blue blazer on city street"><img src="assets/img/w900/rsw_1440h_1440-6.webp" srcset="assets/img/w450/rsw_1440h_1440-6.webp 450w, assets/img/w900/rsw_1440h_1440-6.webp 832w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="832" height="1248" alt="Smiling man in blue blazer on city street" fetchpriority="high"></button>
+          <figcaption><span class="n" aria-hidden="true">25</span>Smiling man in blue blazer on city street</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/IMG_1591.webp" data-caption="Vintage radio station blueprint design" aria-label="Open larger view: Vintage radio station blueprint design"><img src="assets/img/w900/IMG_1591.webp" srcset="assets/img/w450/IMG_1591.webp 450w, assets/img/w900/IMG_1591.webp 900w, assets/img/IMG_1591.webp 1142w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1142" height="1600" alt="Vintage radio station blueprint design" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">26</span>Vintage radio station blueprint design</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/306C2B1A-38FF-4867-A65D-66F2F5C58524.jpeg" data-caption="Transport van in motion near entrance" aria-label="Open larger view: Transport van in motion near entrance"><img src="assets/img/w900/306C2B1A-38FF-4867-A65D-66F2F5C58524.webp" srcset="assets/img/w450/306C2B1A-38FF-4867-A65D-66F2F5C58524.webp 450w, assets/img/w900/306C2B1A-38FF-4867-A65D-66F2F5C58524.webp 900w, assets/img/306C2B1A-38FF-4867-A65D-66F2F5C58524.jpeg 960w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="960" height="1072" alt="Transport van in motion near entrance" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">27</span>Transport van in motion near entrance</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-7.webp" data-caption="Greystone Pickleball Club building, Dempster Designs logo" aria-label="Open larger view: Greystone Pickleball Club building, Dempster Designs logo"><img src="assets/img/w900/rsw_1440h_1440-7.webp" srcset="assets/img/w450/rsw_1440h_1440-7.webp 450w, assets/img/w900/rsw_1440h_1440-7.webp 880w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="880" height="1184" alt="Greystone Pickleball Club building, Dempster Designs logo" fetchpriority="high"></button>
+          <figcaption><span class="n" aria-hidden="true">28</span>Greystone Pickleball Club building, Dempster Designs logo</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-8.webp" data-caption="Dempster Designs logo on grassy storefront" aria-label="Open larger view: Dempster Designs logo on grassy storefront"><img src="assets/img/w900/rsw_1440h_1440-8.webp" srcset="assets/img/w450/rsw_1440h_1440-8.webp 450w, assets/img/w900/rsw_1440h_1440-8.webp 900w, assets/img/rsw_1440h_1440-8.webp 976w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="976" height="1056" alt="Dempster Designs logo on grassy storefront" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">29</span>Dempster Designs logo on grassy storefront</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-9.webp" data-caption="Wabeek South stone sign with festive greenery" aria-label="Open larger view: Wabeek South stone sign with festive greenery"><img src="assets/img/w900/rsw_1440h_1440-9.webp" srcset="assets/img/w450/rsw_1440h_1440-9.webp 450w, assets/img/w900/rsw_1440h_1440-9.webp 900w, assets/img/rsw_1440h_1440-9.webp 1071w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1071" height="1440" alt="Wabeek South stone sign with festive greenery" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">30</span>Wabeek South stone sign with festive greenery</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-10.webp" data-caption="Henry Ford Health building with large banner" aria-label="Open larger view: Henry Ford Health building with large banner"><img src="assets/img/w900/rsw_1440h_1440-10.webp" srcset="assets/img/w450/rsw_1440h_1440-10.webp 450w, assets/img/w900/rsw_1440h_1440-10.webp 900w, assets/img/rsw_1440h_1440-10.webp 1025w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1025" height="1089" alt="Henry Ford Health building with large banner" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">31</span>Henry Ford Health building with large banner</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/IMG_1523.jpeg" data-caption="Modern mobile clinic on road" aria-label="Open larger view: Modern mobile clinic on road"><img src="assets/img/w900/IMG_1523.webp" srcset="assets/img/w450/IMG_1523.webp 450w, assets/img/w900/IMG_1523.webp 900w, assets/img/IMG_1523.jpeg 976w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="976" height="976" alt="Modern mobile clinic on road" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">32</span>Modern mobile clinic on road</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:0">
+          <button type="button" data-full="assets/img/rsw_1440h_1440-11.webp" data-caption="Corner brick cafe with colorful tree mural" aria-label="Open larger view: Corner brick cafe with colorful tree mural"><img src="assets/img/w900/rsw_1440h_1440-11.webp" srcset="assets/img/w450/rsw_1440h_1440-11.webp 450w, assets/img/w900/rsw_1440h_1440-11.webp 900w, assets/img/rsw_1440h_1440-11.webp 1024w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1024" height="1008" alt="Corner brick cafe with colorful tree mural" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">33</span>Corner brick cafe with colorful tree mural</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:1">
+          <button type="button" data-full="assets/img/22331347-C706-4925-BFA9-24A09E7CF0DD-1.jpeg" data-caption="Bar interior with neon hammer wall art" aria-label="Open larger view: Bar interior with neon hammer wall art"><img src="assets/img/w900/22331347-C706-4925-BFA9-24A09E7CF0DD-1.webp" srcset="assets/img/w450/22331347-C706-4925-BFA9-24A09E7CF0DD-1.webp 450w, assets/img/w900/22331347-C706-4925-BFA9-24A09E7CF0DD-1.webp 880w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="880" height="1168" alt="Bar interior with neon hammer wall art" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">34</span>Bar interior with neon hammer wall art</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:2">
+          <button type="button" data-full="assets/img/hero-4-v2_background_image-4-1.webp" data-caption="Vintage van painted with colorful flowers" aria-label="Open larger view: Vintage van painted with colorful flowers"><img src="assets/img/w900/hero-4-v2_background_image-4-1.webp" srcset="assets/img/w450/hero-4-v2_background_image-4-1.webp 450w, assets/img/w900/hero-4-v2_background_image-4-1.webp 900w, assets/img/hero-4-v2_background_image-4-1.webp 1600w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1600" height="821" alt="Vintage van painted with colorful flowers" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">35</span>Vintage van painted with colorful flowers</figcaption>
+        </figure>
+        <figure class="reveal" style="--i:3">
+          <button type="button" data-full="assets/img/benefit-12-v3_image1-2-1.webp" data-caption="Farm market storefront with giant apple decoration" aria-label="Open larger view: Farm market storefront with giant apple decoration"><img src="assets/img/w900/benefit-12-v3_image1-2-1.webp" srcset="assets/img/w450/benefit-12-v3_image1-2-1.webp 450w, assets/img/w900/benefit-12-v3_image1-2-1.webp 900w, assets/img/benefit-12-v3_image1-2-1.webp 1098w" sizes="(min-width: 1200px) 22vw, (min-width: 640px) 30vw, 46vw" width="1098" height="768" alt="Farm market storefront with giant apple decoration" loading="lazy" decoding="async"></button>
+          <figcaption><span class="n" aria-hidden="true">36</span>Farm market storefront with giant apple decoration</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="lb" aria-label="Larger view">
+    <button class="lb-close" type="button" aria-label="Close"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+  </dialog>
+
+  <!-- copy: /what-we-offer/ "Our Work, Your Vision" — black band -->
+  <section class="section t-dark" data-theme="dark" aria-labelledby="ow-h">
+    <div class="wrap section-head" style="margin-bottom:0">
+      <h2 class="display h-lg reveal" id="ow-h">Our Work, Your Vision</h2>
+      <div class="reveal" style="--i:1">
+        <p class="lede" style="margin-bottom: 24px;">For over six decades, we have delivered standout creative for clients nationwide, backed by steady expertise. Connect with us today.</p>
+        <a class="btn" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </section>
+<a class="fab btn" href="contact.html">Start the Conversation</a>
+
+</main>
+
+
+
+<footer class="site-foot t-dark" data-theme="dark">
+
+  <div class="wrap">
+
+    <div class="cols">
+
+      <a class="brand" href="index.html" aria-label="Dempster Designs, home">
+
+        <img src="assets/img/w900/logo-96.webp" width="96" height="88" alt="" loading="lazy">
+
+        <span>Dempster Designs</span>
+
+      </a>
+
+      <nav aria-label="Footer">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="what-we-offer.html">What We Offer</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <address>
+
+        P.O. Box 831<br>Bloomfield Hills, MI 48304<br>
+
+        <a href="tel:+12483989999">(248) 398-9999</a><br>
+
+        <a href="mailto:designsbydempster@gmail.com">designsbydempster@gmail.com</a>
+
+      </address>
+
+    </div>
+
+    <small>© <span id="year">2026</span>, Dempster Designs. All Rights Reserved.</small>
+
+  </div>
+
+</footer>
+
+
+
+<script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>
+
