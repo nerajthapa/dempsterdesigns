@@ -184,7 +184,8 @@
   /* 4g. Contact form -------------------------------------------------------- */
   // Netlify Forms: a URL-encoded POST to the site itself, including the hidden form-name field.
   // Who gets emailed is set in the Netlify dashboard (Forms → Form submission notifications).
-  var form = document.querySelector('form[data-netlify]');
+  // Select by name, not [data-netlify]: Netlify strips that attribute from the deployed HTML.
+  var form = document.querySelector('form[name="contact"]');
   var fStatus = form && form.querySelector('.form-status');
   var fBtn = form && form.querySelector('button[type="submit"]');
   if (form && fStatus && fBtn && window.fetch && window.FormData && window.URLSearchParams) {
